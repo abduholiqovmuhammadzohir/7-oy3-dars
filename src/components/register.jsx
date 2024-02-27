@@ -70,10 +70,9 @@ function Register() {
         })
             .then(res => res.json())
             .then(data => {
-                setIsLoading(false);
                 if (data.message === "User registered successfully!") {
                     setIsRegistered(true);
-                    navigate("/login");
+                    navigate("/");
                 }
                 console.log(data);
             })
